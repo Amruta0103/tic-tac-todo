@@ -4,30 +4,35 @@
 // import './index.css';
 import store from './store';
 
-console.log("Initial State ",store.getState());
-
-const unsubscribe = store.subscribe(() => 
-console.log('State aftr dispatch',store.getState())
-)
-
+// console.log('Dispatching action')
 store.dispatch({ type: 'todos/todoAdded', payload: 'Learn about actions' })
-store.dispatch({ type: 'todos/todoAdded', payload: 'Learn about reducers' })
-store.dispatch({ type: 'todos/todoAdded', payload: 'Learn about stores' })
+// console.log('Dispatch complete')
 
-store.dispatch({ type: 'todos/todoToggled', payload: 0 })
-store.dispatch({ type: 'todos/todoToggled', payload: 1 })
+// console.log("Initial State ",store.getState());
 
-store.dispatch({ type: 'filters/statusFilterChanged', payload: 'Active' })
+// const unsubscribe = store.subscribe(() => 
+console.log('State aftr dispatch',store.getState())
+// )
 
-store.dispatch({
-  type: 'filters/colorFilterChanged',
-  payload: { color: 'red', changeType: 'added' }
-})
+// store.dispatch({ type: 'todos/todoAdded', payload: 'Learn about actions' })
+// store.dispatch({ type: 'todos/todoAdded', payload: 'Learn about reducers' })
+// store.dispatch({ type: 'todos/todoAdded', payload: 'Learn about stores' })
 
-unsubscribe()
+// store.dispatch({ type: 'todos/todoToggled', payload: 0 })
+// store.dispatch({ type: 'todos/todoToggled', payload: 1 })
+
+// store.dispatch({ type: 'filters/statusFilterChanged', payload: 'Active' })
+
+// store.dispatch({
+//   type: 'filters/colorFilterChanged',
+//   payload: { color: 'red', changeType: 'added' }
+// })
+
+// unsubscribe()
 
 
-store.dispatch({ type: 'todos/todoAdded', payload: 'Try creating a store' })
+// store.dispatch({ type: 'todos/todoAdded', payload: 'Try creating a store' })
+
 // const container = document.getElementById('root');
 // const root = createRoot(container);
 
